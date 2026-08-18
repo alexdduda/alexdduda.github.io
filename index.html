@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Duda | Software Engineer</title>
+  <meta name="description" content="Alex Duda. Software Engineer building full-stack, AI-integrated systems." />
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=7" />
+  <script>
+    (function () {
+      var saved = localStorage.getItem("theme");
+      if (saved === "light") document.documentElement.classList.add("light");
+    })();
+  </script>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="wrap">
+      <span class="site-id">guest@alexduda</span>
+      <nav class="main-nav">
+        <a href="#projects">projects</a>
+        <a href="#skills">skills</a>
+        <a href="#education">education</a>
+      </nav>
+      <div class="topbar-actions">
+        <button id="terminal-toggle" type="button">open terminal</button>
+        <button id="theme-toggle" type="button">light mode</button>
+      </div>
+    </div>
+  </header>
+
+  <div id="terminal-panel" class="terminal-panel">
+    <div class="wrap">
+      <div id="term-output" class="term-output"></div>
+      <div class="term-input-row">
+        <span class="term-prompt">guest@alexduda:~$</span>
+        <input id="term-input" class="term-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="terminal input" />
+      </div>
+    </div>
+  </div>
+
+  <main class="wrap">
+
+    <section class="hero" id="top">
+      <div class="prompt"><span class="user">guest@alexduda</span>:~$ whoami</div>
+      <h1><span id="typed-name">Alex Duda</span><span class="cursor"></span></h1>
+      <p class="role">Software Engineer | full-stack, AI-integrated systems</p>
+      <p class="pitch">
+        Computer Science student at McGill University who ships production software end to end:
+        backend systems, developer tools, data pipelines, and algorithms. I like working on things
+        for the betterment of all, which is what draws me to engineering at Axon.
+      </p>
+      <div class="contact-row">
+        <a href="mailto:alexander.duda@mail.mcgill.ca">alexander.duda@mail.mcgill.ca</a>
+        <a href="https://github.com/alexdduda" target="_blank" rel="noopener">github</a>
+        <a href="https://www.linkedin.com/in/alexander-duda" target="_blank" rel="noopener">linkedin</a>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="prompt"><span class="user">guest@alexduda</span>:~$ ls ~/projects</div>
+
+      <div class="project">
+        <div class="project-head">
+          <h3>mcgill-ai-advisor/ (Symbolos)</h3>
+          <span class="project-dates">Jul 2025 to present</span>
+        </div>
+        <div class="meta">Full-stack web app. Python, FastAPI, React/Vite, Supabase (PostgreSQL), Claude API, GitHub Actions CI/CD</div>
+        <ul>
+          <li>Designed, built, and deployed a production full-stack AI advising platform, free for every McGill student (FastAPI backend on Vercel, React/Vite frontend, Supabase for auth and data), integrating the Claude API for contextual, LLM-driven academic guidance</li>
+          <li>Engineered a black-box application security testing suite (Nuclei scanners, stateful Python probes for JWT/RLS/IDOR vulnerabilities, and a GitHub Actions CI/CD pipeline splitting fast and slow checks), identifying and resolving 25 flagged vulnerabilities across four audit sweeps</li>
+          <li>Localized the product to English, French, and Mandarin (300+ translation keys) and manage a team of 4 (engineering, design, growth) to drive adoption via a technical SEO/GEO strategy (schema markup, llms.txt, community outreach)</li>
+        </ul>
+        <div class="project-links"><a href="https://github.com/alexdduda/ai-advisor" target="_blank" rel="noopener">github.com/alexdduda/ai-advisor</a></div>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <h3>ai-auditor/</h3>
+          <span class="project-dates">Jul 2026 to present</span>
+        </div>
+        <div class="meta">CLI tool. Python, Anthropic SDK (Claude), concurrent pipeline architecture, code execution and web search tool use</div>
+        <ul>
+          <li>Architected a multi-stage audit pipeline that verifies any LLM-generated solution by extracting and testing its underlying assumptions, running executable checks via a code-execution tool, searching the web for counter-evidence, and computing a calibrated confidence score with an explanation of remaining uncertainty</li>
+          <li>Ran independent, mutually-exclusive pipeline stages concurrently to cut wall-clock latency, and implemented explicit error handling so model refusals or truncated (max-token) responses raise an error instead of silently producing incomplete output</li>
+        </ul>
+        <div class="project-links"><a href="https://github.com/alexdduda/ai-auditor" target="_blank" rel="noopener">github.com/alexdduda/ai-auditor</a></div>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <h3>plumb/ (@plumb/scanner)</h3>
+          <span class="project-dates">Jun 2026 to present</span>
+        </div>
+        <div class="meta">VS Code extension and MCP server. TypeScript, Node.js, YAML</div>
+        <ul>
+          <li>Built and published an open-source VS Code extension and MCP server that scans GitHub repositories and recommends verified open-source solutions, scored by a custom six-signal automated evaluation engine (Assay)</li>
+          <li>Seeded and maintain a community-driven YAML registry spanning 20 entries across seven categories</li>
+        </ul>
+        <div class="project-links"><a href="https://github.com/plumb-dev/plumb" target="_blank" rel="noopener">github.com/plumb-dev/plumb</a></div>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <h3>tokenized-treasury-dashboard/</h3>
+          <span class="project-dates">Jul 2026 to present</span>
+        </div>
+        <div class="meta">Data pipeline and web app. Python, SQLAlchemy/SQLite, TypeScript, React, Vite, Recharts, GitHub Actions</div>
+        <ul>
+          <li>Built a full-stack data pipeline tracking $9.8B+ across six tokenized U.S. Treasury products (BUIDL, USYC, OUSG, and others) on 8+ blockchains, ingesting 18,000+ historical snapshots from the DefiLlama API into a normalized SQLite schema</li>
+          <li>Implemented on-chain verification (direct smart-contract reads via public RPC) to cross-check reported figures against ground-truth token supply, with fully automated daily ingestion and deployment to GitHub Pages via GitHub Actions</li>
+        </ul>
+        <div class="project-links"><a href="https://github.com/alexdduda/tokenization-dashboard" target="_blank" rel="noopener">github.com/alexdduda/tokenization-dashboard</a></div>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <h3>grantguard/</h3>
+          <span class="project-dates">May 2026 to present</span>
+        </div>
+        <div class="meta">Algorithm design and simulation. Python, Monte Carlo methods</div>
+        <ul>
+          <li>Designed a corruption-resistant algorithm for government grant and contract allocation across three design iterations, informed by empirical analysis of real-world corruption signatures across multiple public datasets</li>
+          <li>Built a weighted Corruption Indicator Matrix and a Monte Carlo simulation framework to stress-test allocation fairness under adversarial conditions</li>
+        </ul>
+        <div class="project-links"><a href="https://github.com/alexdduda/grantguard" target="_blank" rel="noopener">github.com/alexdduda/grantguard</a></div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="prompt"><span class="user">guest@alexduda</span>:~$ cat skills.txt</div>
+
+      <div class="skill-row">
+        <span class="skill-label">languages and tools</span>
+        <span class="skill-value">Java, Python, TypeScript/JavaScript, C, SQL, HTML/CSS</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">frameworks and platforms</span>
+        <span class="skill-value">React, React Native, Node.js, FastAPI, Supabase/PostgreSQL, SQLite, Docker, Git, GitHub Actions (CI/CD), Linux/Unix, REST APIs, Pydantic, Homebrew</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">ai and data</span>
+        <span class="skill-value">LLM integration (Anthropic Claude API), prompt engineering, web scraping, data analysis (R, Excel, Tableau)</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">spoken languages</span>
+        <span class="skill-value">Fluent English, Intermediate French and Romanian, Basic Italian</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">interests</span>
+        <span class="skill-value">Brentford FC, Travelling and Eating, Data Privacy</span>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="prompt"><span class="user">guest@alexduda</span>:~$ cat education.txt</div>
+      <div class="edu">
+        <h3>McGill University, Faculty of Arts</h3>
+        <div class="edu-sub">Bachelor of Arts, Major in Computer Science, Minor in Anthropology. Sept 2024 to Dec 2027 (expected)</div>
+        <div class="edu-course">Relevant coursework: Calculus I to III, Linear Algebra I to II, Discrete Mathematics, Probability, Intro to Computer Science, Software Systems, Computer Systems, Algorithms and Data Structures</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    guest@alexduda:~$ <a href="#top">cd ~</a><span class="cursor"></span>
+  </footer>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <video id="lightbox-video" class="lightbox-video" muted loop playsinline preload="auto">
+      <source src="assets/bg-animation.mp4" type="video/mp4" />
+    </video>
+    <div class="lightbox-content">
+      <img src="assets/alex-cutout.png" alt="Alex Duda" />
+      <div class="lightbox-hint">click anywhere or press esc to close</div>
+    </div>
+  </div>
+
+  <script src="script.js?v=7"></script>
+</body>
+</html>
