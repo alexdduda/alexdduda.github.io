@@ -128,6 +128,7 @@
       printLine("  skills          list skills");
       printLine("  education       education info");
       printLine("  contact         ways to reach me");
+      printLine("  resume          download my resume as a pdf");
       printLine("  photo           open a photo of me");
       printLine("  open <name>     open a project on github");
       printLine("  theme <mode>    set light or dark");
@@ -156,6 +157,14 @@
       printLine("email: alexander.duda@mail.mcgill.ca");
       printLine("github: github.com/alexdduda");
       printLine("linkedin: linkedin.com/in/alexander-duda");
+    } else if (name === "resume") {
+      printLine("downloading resume...");
+      var link = document.createElement("a");
+      link.href = "assets/alex-duda-resume.pdf";
+      link.download = "Alex_Duda_Resume.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     } else if (name === "photo") {
       printLine("opening photo...");
       if (typeof window.openAlexLightbox === "function") window.openAlexLightbox();
