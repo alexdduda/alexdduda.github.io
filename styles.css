@@ -209,6 +209,8 @@ section:last-of-type { border-bottom: none; }
 .skill-value { font-size: 14px; }
 
 /* Education */
+.edu { margin-bottom: 22px; }
+.edu:last-child { margin-bottom: 0; }
 .edu h3 { margin: 0 0 4px; font-size: 16px; }
 .edu .edu-sub { color: var(--dim); font-size: 13px; margin-bottom: 8px; }
 .edu .edu-course { font-size: 13.5px; }

@@ -137,7 +137,7 @@
     } else if (name === "whoami") {
       printLine("Alex Duda. Software Engineer, full-stack and AI-integrated systems.");
     } else if (name === "about") {
-      printLine("Computer Science student at McGill University who ships production software end to end: backend systems, developer tools, data pipelines, and algorithms.");
+      printLine("Computer Science student at McGill who ships real software across the stack: AI platforms, security tooling, blockchain data pipelines, developer tools, and algorithm design.");
     } else if (name === "projects" || (name === "ls" && arg.indexOf("project") !== -1)) {
       printLine("mcgill-ai-advisor              Symbolos, McGill's free AI academic advising platform");
       printLine("ai-auditor                     general-purpose LLM output auditing pipeline");
@@ -153,6 +153,7 @@
     } else if (name === "education" || (name === "cat" && arg.indexOf("education") !== -1)) {
       printLine("McGill University, Faculty of Arts.");
       printLine("B.A., Major in Computer Science, Minor in Anthropology. Sept 2024 to Dec 2027 (expected).");
+      printLine("Google Data Analytics Professional Certificate. Aug 2025 to Dec 2025 (expected).");
     } else if (name === "contact") {
       printLine("email: alexander.duda@mail.mcgill.ca");
       printLine("github: github.com/alexdduda");
