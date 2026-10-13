@@ -86,12 +86,41 @@
           <h3>ai-auditor/</h3>
           <span class="project-dates">Jul 2026 to present</span>
         </div>
-        <div class="meta">CLI tool. Python, Anthropic SDK (Claude), concurrent pipeline architecture, code execution and web search tool use</div>
+        <div class="meta">Python framework and CLI. Anthropic SDK (Claude), stage-graph scheduler, plugin system, code execution and web search tool use</div>
         <ul>
-          <li>Built a multi-stage pipeline that audits any LLM-generated solution: extracts and tests its assumptions, runs executable checks, searches for counter-evidence, and outputs a calibrated confidence score</li>
-          <li>Ran independent pipeline stages concurrently to cut latency, with explicit error handling so refusals or truncated responses fail loudly instead of silently returning incomplete output</li>
+          <li>Built an extensible framework for auditing LLM-generated answers: each audit is a graph of stages written as plain Python functions, and the framework schedules them in dependency order, running independent stages in parallel</li>
+          <li>Designed a plugin API (decorators, files, or package entry points) for adding, replacing, or removing stages, with dependency validation, cycle detection, and cascading removal</li>
+          <li>Shipped a built-in audit on the framework that extracts and verifies assumptions, runs executable checks, searches for counter-evidence, and outputs a calibrated confidence score</li>
+          <li>Made failures explicit: refusals or truncated responses fail loudly, and with fail-fast off, failed stages and everything downstream are reported instead of silently dropped</li>
         </ul>
         <div class="project-links"><a href="https://github.com/alexdduda/ai-auditor" target="_blank" rel="noopener">github.com/alexdduda/ai-auditor</a></div>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <h3>repo-briefs/</h3>
+          <span class="project-dates">Oct 2026 to present</span>
+        </div>
+        <div class="meta">Developer tool and evaluation harness. TypeScript, Node.js, TypeScript compiler API, SQLite, Zod</div>
+        <ul>
+          <li>Built an offline indexer that models a TypeScript/JavaScript repo at an exact commit and generates file and task briefs for coding agents, where every claim traces back to evidence re-readable from a git blob</li>
+          <li>Made briefs detect their own staleness by re-running their recorded queries against newer commits, and added a command that suggests evidence-backed CLAUDE.md/AGENTS.md lines</li>
+          <li>Built an evaluation harness that runs real coding agents on historical tasks with hidden tests; in an 8-task pilot, structured selection reached 0.83 file recall versus 0.38 for BM25 retrieval at equal token budgets</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <h3>jurisdictions/</h3>
+          <span class="project-dates">Oct 2026 to present</span>
+        </div>
+        <div class="meta">Language design and agent-based simulation. Python (standard library only), Latin hypercube sampling</div>
+        <ul>
+          <li>Designed scopelang, a small language where each variable carries its own precedence rule (preemption, floors, matching grants), treating federalism the way programming languages treat variable scope</li>
+          <li>Built an agent-based simulation of 1,600 mobile residents across 16 regions that searches for the best split of power between a nation and its regions, reading and writing its results as scopelang programs</li>
+          <li>Calibrated the model to Canadian data and stress-tested it across 200 sampled worlds per policy area, which overturned one conclusion of the original single-world study</li>
+        </ul>
+        <div class="project-links"><a href="https://github.com/alexdduda/jurisdictions" target="_blank" rel="noopener">github.com/alexdduda/jurisdictions</a></div>
       </div>
 
       <div class="project">

@@ -79,8 +79,11 @@
     "plumb": "https://github.com/plumb-dev/plumb",
     "tokenized-treasury-dashboard": "https://github.com/alexdduda/tokenization-dashboard",
     "treasury": "https://github.com/alexdduda/tokenization-dashboard",
-    "grantguard": "https://github.com/alexdduda/grantguard"
+    "grantguard": "https://github.com/alexdduda/grantguard",
+    "jurisdictions": "https://github.com/alexdduda/jurisdictions"
   };
+
+  var privateProjects = ["repo-briefs"];
 
   function printLine(text, cls) {
     var line = document.createElement("div");
@@ -141,7 +144,9 @@
       printLine("Detail-obsessed. I finish what I start.");
     } else if (name === "projects" || (name === "ls" && arg.indexOf("project") !== -1)) {
       printLine("mcgill-ai-advisor              Symbolos, McGill's free AI academic advising platform");
-      printLine("ai-auditor                     general-purpose LLM output auditing pipeline");
+      printLine("ai-auditor                     extensible framework for auditing LLM output");
+      printLine("repo-briefs                    evidence-backed codebase memory for coding agents");
+      printLine("jurisdictions                  federalism as variable scope: a language and a simulation");
       printLine("plumb                          open-source codebase intelligence tool");
       printLine("tokenized-treasury-dashboard   $9.8B+ tokenized Treasury data pipeline");
       printLine("grantguard                     corruption-resistant grant allocation algorithm");
@@ -173,7 +178,9 @@
     } else if (name === "open") {
       var slug = arg.replace(/\s+/g, "-");
       var url = projectLinks[slug];
-      if (url) {
+      if (privateProjects.indexOf(slug) !== -1) {
+        printLine(arg + " isn't public yet. ask me about it: alexander.duda@mail.mcgill.ca");
+      } else if (url) {
         printLine("opening " + url + " ...");
         window.open(url, "_blank", "noopener");
       } else {
