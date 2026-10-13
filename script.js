@@ -160,6 +160,7 @@
       printLine("McGill University, Faculty of Arts.");
       printLine("B.A., Major in Computer Science, Minor in Anthropology. Sept 2024 to Dec 2027 (expected).");
       printLine("Google Data Analytics Professional Certificate. Aug 2025 to Dec 2025 (expected).");
+      printLine("Harvard Medical School and Massachusetts General Hospital, Student Intern. Mar 2023 to Aug 2023.");
     } else if (name === "contact") {
       printLine("email: alexander.duda@mail.mcgill.ca");
       printLine("github: github.com/alexdduda");
