@@ -153,7 +153,7 @@
       printLine("");
       printLine('type "open <name>" to view one on github, e.g. open grantguard');
     } else if (name === "skills" || (name === "cat" && arg.indexOf("skills") !== -1)) {
-      printLine("languages: Java, Python, TypeScript/JavaScript, C, SQL, HTML/CSS");
+      printLine("languages and tools: Java, Python, TypeScript/JavaScript, C, SQL, HTML/CSS, Vim");
       printLine("frameworks: React, React Native, Node.js, FastAPI, Supabase/PostgreSQL, SQLite, Docker, Git, GitHub Actions, Linux/Unix, REST APIs, Pydantic");
       printLine("ai and data: Claude API integration, prompt engineering, web scraping, data analysis");
     } else if (name === "education" || (name === "cat" && arg.indexOf("education") !== -1)) {
